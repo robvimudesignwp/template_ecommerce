@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700;800;900&family=Lato:wght@400;700;900&display=swap');
+
+/*=============== Variables ================*/
+:root{
+  /*====== Fonts ======*/
+  --heading-main: 'Kanit', sans-serif;
+  --paragraph-content: 'Lato', sans-serif;
+  /*====== Colors ======*/
+  --primary-color: #026299;
+  --secondary-color: ;
+  --tertiary-color: ;
+  --grey-color: #cacaca;
+}
+
+/**
+ * https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+
+/*=============== Styles Globals ================*/
+a{
+  text-decoration: none;
+  font-family: var(--paragraph-content);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+img{
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+p{
+  font-family: var(--paragraph-content);
+}
+
+h1, h2, h3, h4{
+  font-family: var(--heading-main);
+  font-weight: 700;
+}
+
+/*=============== Header and Navigation ================*/
+h1{
+  color: #000;
+}
+
+.site-name{
+  text-align: center;
+}
+
+.site-name span{
+  color: #037bc0;
+}
+
+.container-navigation{
+  border-top: 1px solid var(--grey-color);
+}
+
+.nav-main{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.hero{
+  background-image: url('../images/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 480px;
+}
+
+/*=============== Products Categories ================*/
+.categories h2{
+  color: #037bc0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.category a{
+  display: block;
+  font-size: 1.6rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.category a:hover{
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.list_categories{
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+}
