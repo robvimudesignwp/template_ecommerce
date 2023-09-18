@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700;800;900&family=Lato:wght@400;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Mulish:wght@400;500;600;700;800;900&display=swap');
 /*=============== Variables ================*/
 :root{
   /*====== Fonts ======*/
-  --heading-main: 'Kanit', sans-serif;
-  --paragraph-content: 'Lato', sans-serif;
+  --heading-main: 'Mulish', sans-serif;
+  --paragraph-content: 'Heebo', sans-serif;
   /*====== Colors ======*/
   --primary-color: #026299;
   --secondary-color: #97c219;
@@ -21,7 +20,7 @@
 /*=============== Styles Globals ================*/
 body{
   font-size: 1.5rem;
-  line-height: 2;
+  line-height: 1.5;
 }
 a{
   text-decoration: none;
@@ -44,7 +43,7 @@ a{
 
 .container {
   margin: 0 auto;
-  max-width: 120rem;
+  max-width: 1200px;
 }
 
 html{
@@ -68,18 +67,28 @@ p{
 h1{
   font-family: var(--heading-main);
   font-size: 4rem;
+  margin: 1.3rem;
 }
 
-h2, h3{
+h2{
   font-family: var(--heading-main);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
+  margin: 1.3rem 0;
+}
+
+h3{
+  font-family: var(--heading-main);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.3rem 0;
 }
 
 h4{
   font-family: var(--heading-main);
   font-size: 1.5rem;
   font-weight: 700;
+  margin: 1.3rem;
 }
 /*=============== Utilities ================*/
 .text-center{
@@ -118,7 +127,8 @@ h1{
 
 /*=============== Products Categories ================*/
 .categories h2{
-  color: #037bc0;
+  color: var(--primary-color);
+  margin: 3rem 0;
   text-align: center;
 }
 
@@ -148,7 +158,9 @@ h1{
     url('../images/about_us.jpg');
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 100%, 120rem;
+  /* background-size: 100%, 120rem; */
+  background-size: cover;
+  margin: 3rem 0;
   padding: 10rem 0;
 }
 
@@ -167,7 +179,7 @@ h1{
 
 /*=============== Products ================*/
 .main-content{
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 
 .main-content h2{
@@ -178,6 +190,7 @@ h1{
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(6, 1fr);
+  margin: 3rem 0;
 }
 
 .product:nth-child(1){
@@ -225,11 +238,34 @@ h1{
 
 .content-product{
   color: var(--white-color);
-  padding: 3rem;
+  margin: 3rem 0;
 }
 
 .content-product .price{
   font-family: var(--paragraph-content);
   font-size: 2.3rem;
   font-weight: 900;
+}
+
+/*=============== Footer ================*/
+
+.site-footer{
+  border-top: 1px solid var(--grey-color);
+  margin: 5rem 0;
+}
+
+.grid-footer{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.site-footer h4,
+.site-footer p{
+  color: var(--primary-color);
+}
+
+.footer_menu a{
+  color: var(--grey-color);
+  display: block;
 }
