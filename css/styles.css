@@ -10,6 +10,7 @@
   --secondary-color: ;
   --tertiary-color: ;
   --grey-color: #cacaca;
+  --white-color: #fff;
 }
 
 /**
@@ -17,6 +18,10 @@
  */
 
 /*=============== Styles Globals ================*/
+body{
+  font-size: 1.5rem;
+  line-height: 2;
+}
 a{
   text-decoration: none;
   font-family: var(--paragraph-content);
@@ -24,7 +29,7 @@ a{
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 120rem;
 }
 
 html{
@@ -45,8 +50,13 @@ p{
   font-family: var(--paragraph-content);
 }
 
-h1, h2, h3, h4{
+h1{
+  font-size: 4rem;
+}
+
+h2, h3{
   font-family: var(--heading-main);
+  font-size: 3rem;
   font-weight: 700;
 }
 
@@ -76,14 +86,14 @@ h1{
 .hero{
   background-image: url('../images/hero.jpg');
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
-  height: 480px;
+  height: 48rem;
 }
 
 /*=============== Products Categories ================*/
 .categories h2{
   color: #037bc0;
-  font-size: 2rem;
   text-align: center;
 }
 
@@ -103,4 +113,29 @@ h1{
   display: grid;
   gap: 2em;
   grid-template-columns: repeat(3, 1fr);
+}
+
+/*=============== Block About Us ================*/
+.about_us{
+  background-image: linear-gradient(to right,
+    transparent 50%,
+    var(--primary-color) 50% ),
+    url('../images/about_us.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%, 120rem;
+  padding: 10rem 0;
+}
+
+.about_us_grid{
+  column-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+
+.text_about{
+  color: var(--white-color);
+  grid-column: 2 / 3;
+  text-align: center;
 }
