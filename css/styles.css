@@ -269,3 +269,21 @@ h1{
   color: var(--grey-color);
   display: block;
 }
+
+/*=============== Page About Us ================*/
+.about_content h2{
+  color: var(--primary-color);
+}
+.content_about{
+  color: var(--primary-color);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+.content_paragraph{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
