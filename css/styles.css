@@ -9,7 +9,8 @@
   --secondary-color: #97c219;
   --tertiary-color: ;
   --grey-color: #cacaca;
-  --white-color: #fff;
+  --paragraph-color: #474444;
+  --white-color: #ffffff;
   --hover-button: #7ea900;
 }
 
@@ -34,6 +35,7 @@ a{
   font-weight: 700;
   padding: 1rem;
   transition: all .3s ease-out;
+  text-align:center;
   text-transform: uppercase;
 }
 
@@ -43,7 +45,7 @@ a{
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 70rem;
 }
 
 html{
@@ -61,6 +63,7 @@ img{
 }
 
 p{
+  font-size: 1.5rem;
   font-family: var(--paragraph-content);
 }
 
@@ -93,6 +96,10 @@ h4{
 /*=============== Utilities ================*/
 .text-center{
   text-align: center;
+}
+
+.max-width-btn{
+  max-width: 30rem;
 }
 /*=============== Header and Navigation ================*/
 h1{
@@ -275,7 +282,7 @@ h1{
   color: var(--primary-color);
 }
 .content_about{
-  color: var(--primary-color);
+  color: var(--paragraph-color);
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr 2fr;
@@ -288,4 +295,53 @@ h1{
   justify-content: center;
 }
 
-/*=============== Page Store Forniture ================*/
+/*=============== Blog  ================*/
+.container-blog{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.article-entry{
+  border-bottom: 1px solid var(--grey-color);
+  color: var(--white-color);
+  margin: 1.5rem 0;
+  padding: 1.5rem 0;
+}
+
+.article-entry:last-of-type{
+  border: none;
+}
+
+.entry-meta{
+  display: flex;
+  justify-content: space-between;
+}
+
+.entry-meta p{
+  color: var(--paragraph-color);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.entry-meta span{
+  color: var(--primary-color);
+}
+
+.content-meta p{
+  color: var(--paragraph-color);
+  margin-bottom: 2.5rem;
+}
+
+.content-entries h3{
+  color: var(--primary-color);
+}
+
+.content-entries li{
+  list-style: none;
+}
+
+.content-entry-blog{
+  margin: 0 auto;
+  width: 50rem;
+}
