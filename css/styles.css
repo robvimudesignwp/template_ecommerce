@@ -30,6 +30,7 @@ a{
 
 .btn{
   background-color: var(--secondary-color);
+  border:none;
   color: var(--color-white);
   font-family: var(--paragraph-content);
   font-weight: 700;
@@ -41,6 +42,7 @@ a{
 
 .btn:hover{
   background-color: var(--hover-button);
+  cursor: pointer;
 }
 
 .container {
@@ -354,4 +356,46 @@ h1{
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+/*=============== Contact Form  ================*/
+.form-contact{
+  margin: 0 auto;
+  max-width: 40rem;
+}
+
+.form-contact input[type="submit"]{
+  color: var(--white-color);
+}
+
+.form-contact fieldset{
+  border: 1px solid #474444;
+  margin: 1.5rem 0;
+}
+
+.form-contact legend{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-family: var(--paragraph-content);
+  margin: 0 auto;
+  padding: 1rem 0;
+  text-align: center;
+  width: 70%;
+}
+
+.field{
+  display: flex;
+  margin: 1rem 0;
+}
+
+.field label{
+  flex-basis: 7rem;
+}
+
+.field input:not([type="radio"]),
+.field textarea,
+.field select{
+  border: 1px solid #474444;;
+  flex: 1;
+  padding: .5rem;
 }
