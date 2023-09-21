@@ -75,6 +75,13 @@ h1{
   margin: 1.3rem;
 }
 
+@media only screen and (max-width: 768px){
+  h1{
+    font-size: 2.5rem;
+    margin: .7rem;
+  }
+}
+
 h2{
   font-family: var(--heading-main);
   font-size: 2.5rem;
@@ -82,11 +89,25 @@ h2{
   margin: 1.3rem 0;
 }
 
+@media only screen and (max-width: 768px){
+  h2{
+    font-size: 1.8rem;
+    margin: .8rem 0;
+  }
+}
+
 h3{
   font-family: var(--heading-main);
   font-size: 2rem;
   font-weight: 700;
   margin: 1.3rem 0;
+}
+
+@media only screen and (max-width: 768px){
+  h3{
+    font-size: 1.4rem;
+    margin: .8rem 0;
+  }
 }
 
 h4{
@@ -121,9 +142,17 @@ h1{
 }
 
 .nav-main{
+  align-items: center;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 2rem 0;
+}
+
+@media only screen and (min-width: 768px){
+  .nav-main{
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .hero{
@@ -131,10 +160,20 @@ h1{
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 48rem;
+  height: 38rem;
+}
+
+@media only screen and (min-width: 768px){
+  .hero{
+
+    height: 48rem;
+  }
 }
 
 /*=============== Products Categories ================*/
+.categories{
+  padding: 5rem 0;
+}
 .categories h2{
   color: var(--primary-color);
   margin: 3rem 0;
@@ -153,46 +192,89 @@ h1{
   color: #fff;
 }
 
-.list_categories{
-  display: grid;
-  gap: 2em;
-  grid-template-columns: repeat(3, 1fr);
+.category img{
+  width: 100%;
 }
 
-/*=============== Block About Us ================*/
+/* .category{
+  margin: 2rem 0;
+} */
+
+@media only screen and (max-width: 768px){
+  .category{
+    margin: 2rem 0;
+  }
+
+  .category a{
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .list_categories{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*=============== Section About Us ================*/
 .about_us{
   background-image: linear-gradient(to right,
     transparent 50%,
     var(--primary-color) 50% ),
     url('../images/about_us.jpg');
-  background-position: center center;
+  background-position: center, center;
   background-repeat: no-repeat;
   /* background-size: 100%, 120rem; */
   background-size: cover;
   margin: 3rem 0;
-  padding: 10rem 0;
+  /* padding: 10rem 0; */
+}
+
+@media only screen and (max-width: 768px){
+  .about_us{
+    background-image: linear-gradient(to bottom,
+      transparent 50%,
+      var(--primary-color) 50% ),
+      url('../images/about_us.jpg');
+    background-size: cover;
+    margin: 1.5rem 0;
+  }
 }
 
 .about_us_grid{
   column-gap: 2rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   justify-content: center;
+}
+
+@media only screen and (min-width: 768px){
+  .about_us_grid{
+    column-gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: unset;
+  }
 }
 
 .text_about{
   color: var(--white-color);
-  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  padding: 3.5rem 2.5rem;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px){
+  .text_about{
+    grid-column: 2 / 3;
+  }
 }
 
 /*=============== Products ================*/
 .main-content{
   padding-top: 3rem;
-}
-
-.main-content h2{
-  color: var(--primary-color);
 }
 
 .list_of_products{
@@ -205,7 +287,7 @@ h1{
 .product:nth-child(1){
   display: grid;
   grid-column: 1 / 7;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 2fr;
 }
 
 .product:nth-child(1) img{
@@ -241,8 +323,48 @@ h1{
   grid-column: 5 / 7;
 }
 
+@media only screen and (max-width: 768px){
+  .list_of_products{
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .product:nth-child(1){
+    grid-template-columns: unset;
+  }
+
+  .product:nth-child(1) img,
+  .product:nth-child(2) img,
+  .product:nth-child(3) img,
+  .product:nth-child(4) img,
+  .product:nth-child(5) img,
+  .product:nth-child(6) img{
+    height: 25rem;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .product:nth-child(2),
+  .product:nth-child(3),
+  .product:nth-child(4),
+  .product:nth-child(5),
+  .product:nth-child(6){
+    grid-column: 1 / 7;
+  }
+
+  .main-content h3{
+    font-size: 2.5rem;
+  }
+
+}
+
+.main-content h2{
+  color: var(--primary-color);
+}
+
 .product{
   background-color: var(--primary-color);
+  margin: .5rem 0;
 }
 
 .content-product{
@@ -267,6 +389,13 @@ h1{
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
+}
+
+@media only screen and (max-width: 768px){
+  .grid-footer{
+    grid-template-columns: unset;
+    justify-content: center;
+  }
 }
 
 .site-footer h4,
